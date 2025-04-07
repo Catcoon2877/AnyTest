@@ -1,0 +1,117 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  gap: 15px;
+}
+
+.logo {
+  margin-right: 10px;
+  
+  img {
+    height: 40px;
+  }
+}
+
+.catalogButton {
+  button {
+    padding: 10px 20px;
+    background: #7397F5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #5a7fd1;
+    }
+  }
+}
+
+.search {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+
+  .searchInput {
+    width: 100%;
+    padding: 10px 50px 10px 20px;
+    border: 2px solid #7397F5;
+    border-radius: 30px;
+    font-size: 14px;
+    outline: none;
+    transition: box-shadow 0.2s;
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(115, 151, 245, 0.3);
+    }
+  }
+
+  .searchButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.rightSection {
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+}
+
+.infoItem {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    color: #7397F5;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .search {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .rightSection {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rightSection {
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .infoItem {
+    font-size: 13px;
+  }
+}
